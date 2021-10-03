@@ -1,0 +1,325 @@
+<!doctype html>
+<html>
+<head>
+  <style type="text/css">
+    body {
+      background: #f0f0f0;
+    }
+    .layer {
+      position: fixed;
+      top: 0;
+      left: 0;
+    }
+
+    @import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #edeef6;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+}
+button {
+  background-color: #6A26D2;
+  border: 0;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  font-size: 14px;
+  padding: 10px 25px;
+}
+
+.modal-container {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.3);
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  pointer-events: none;
+  opacity: 0;  
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  transition: opacity 0.3s ease;
+}
+
+.show {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.modal {
+  background-color: #fff;
+  width: 600px;
+  max-width: 100%;
+  padding: 30px 50px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.modal h1 {
+  margin: 0;
+}
+
+.modal p {
+  opacity: 0.7;
+  font-size: 14px;
+}
+  </style>
+</head>
+<body>
+  <canvas id="spaces" class="layer"></canvas>
+  <canvas id="cards" class="layer"></canvas>
+  <canvas id="drag" class="layer"></canvas>
+
+  <button id="open" style="position: absolute;top: 5%; left:5%;">
+    Abrir guía
+  </button>
+  
+  <div id="modal_container" class="modal-container">
+    <div class="modal">
+      <h1>Combina Elementos</h1>
+      <p>
+      <h4>Robert Boyle:</h4> Hola Juan David, combina arrastrando 2 ó 3 elementos del panel para conseguir increibles combinaciones.
+        
+      </p>
+      <p>¡Diviertete!</p>
+      <button id="close">Cerrar</button>
+    </div>
+  </div>
+
+  <script>
+    const open = document.getElementById('open');
+    const modal_container = document.getElementById('modal_container');
+    const close = document.getElementById('close');
+    modal_container.classList.add('show'); 
+    open.addEventListener('click', () => {
+    modal_container.classList.add('show');  
+    });
+
+    close.addEventListener('click', () => {
+    modal_container.classList.remove('show');
+    });
+    var CARD_WIDTH = 100;
+    var CARD_HEIGHT = 100;
+    var names = ["Fuego", "Agua", "Tierra"];
+    var color = ['#f00','#00f','#69B00B'];
+
+    function byId(id) {
+      return document.getElementById(id);
+    }
+
+    var canvases = {
+      spaces: byId('spaces'),
+      drag: byId('drag'),
+      cards: byId('cards')
+    };
+
+    var context = {
+      spaces: canvases.spaces.getContext('2d'),
+      drag: canvases.drag.getContext('2d'),
+      cards: canvases.cards.getContext('2d'),
+    };
+
+    var state = {
+      spaces: [
+        {x: 1000, y: 50, card: null},
+        {x: 1000, y: 150, card: null},
+        {x: 1000, y: 250, card: null}, 
+      ],
+      cards: [],
+      holdingCard: null,
+      isMouseDown: false,
+      cursorOffset: null
+    };
+
+    function drawSpace(space) {
+      var ctx = context.spaces;
+
+      ctx.fillStyle = '#bababa';
+      ctx.lineWidth = 2;
+      ctx.strokeStyle = '#999999';
+      ctx.fillRect(space.x, space.y, CARD_WIDTH, CARD_HEIGHT);
+      ctx.strokeRect(space.x, space.y, CARD_WIDTH, CARD_HEIGHT);
+      
+    }
+
+    function drawSpaces() {
+      state.spaces.forEach(function(space) {
+        drawSpace(space);
+      });
+    }
+
+    let elementos_conseguidos = 0;
+
+    function drawCard(card, ctx) {
+      ctx.fillStyle = card.color;
+      ctx.strokeStyle = '#999999';
+      ctx.fillRect(card.x, card.y, 70,70);
+      ctx.font = "20 px Arial";
+      ctx.fillText(card.text,card.x + 20,card.y + 80 );
+
+    }
+
+    function drawCards() {
+      context.cards.clearRect(
+        0, 0,
+        canvases.cards.width,
+        canvases.cards.height
+      );
+
+      state.cards.forEach(function(card) {
+        if (card !== state.holdingCard) {
+          drawCard(card, context.cards);
+        }
+      });
+      
+    }
+
+    window.onresize = function() {
+      var w = window.innerWidth;
+      var h = window.innerHeight;
+
+      for (var key in canvases) {
+        canvases[key].width = w;
+        canvases[key].height = h;
+      }
+    }
+
+    canvases.drag.onmousedown = function(e) {
+      var card;
+      state.isMouseDown = true;
+
+      for (var index = 0; index < state.cards.length; index++) {
+        card = state.cards[index];
+
+        if (e.clientX >= card.x && e.clientX < CARD_WIDTH + card.x
+          && e.clientY >= card.y && e.clientY < CARD_HEIGHT + card.y)
+        {     
+          state.holdingCard = card;
+          state.cursorOffset = {
+            x: e.clientX - card.x,
+            y: e.clientY - card.y
+          };
+
+          drawCards();
+          drawSpaces();
+          context.drag.clearRect(0, 0,
+            canvases.drag.width,
+            canvases.drag.height,
+          );
+          drawCard(state.holdingCard, context.drag);
+          
+          break;
+        }
+      }
+    };
+
+    let getDistance = function(xpos1, ypos1, xpos2, ypos2){
+      let distance = Math.sqrt(Math.pow(xpos2 - xpos1,2) + Math.pow(ypos2 - ypos1,2));
+      //console.log(distance);
+      return distance;
+    };
+
+    canvases.drag.onmouseup = function() {
+      state.isMouseDown = false;
+
+      var didMatch = false;
+      if (state.cursorOffset != null) {
+        var card = state.holdingCard;
+        state.cursorOffset = null;
+
+        for (var index = 0; index < state.spaces.length; index++) {
+          var s = state.spaces[index];
+
+          if (Math.abs(card.x - s.x) < (CARD_WIDTH / 1.5)
+            && Math.abs(card.y - s.y) < (CARD_HEIGHT / 1.5)
+          ) {
+            card.x = s.x + 15;
+            card.y = s.y + 15;
+            didMatch = true;
+            state.holdingCard = null;
+            break;
+          }
+        }
+
+        if(getDistance(state.cards[0].x, state.cards[0].y,state.cards[1].x, state.cards[1].y) < 30){
+            //console.log("Misma distancia");
+            
+            state.cards.push({
+                x: state.cards[0].x, y: state.cards[0].y, 
+                width: 70, height: 70,
+                color: '#000',
+                text: "Vapor"
+            });
+            
+            state.cards.splice(0,2);            
+            elementos_conseguidos++;                
+        }
+      }
+      
+
+      if (didMatch) {
+        context.cards.clearRect(0, 0,
+          canvases.cards.width,
+          canvases.cards.height
+        );
+        context.drag.clearRect(0, 0,
+          canvases.cards.width,
+          canvases.cards.height
+        );
+        drawCards();
+        drawSpaces();
+      }
+
+      
+    };
+
+    canvases.drag.onmousemove = function(e) {
+      if (state.cursorOffset && state.holdingCard != null) {
+        var card = state.holdingCard;
+
+        card.x = e.clientX - state.cursorOffset.x;
+        card.y = e.clientY - state.cursorOffset.y;
+
+        context.drag.clearRect(0, 0,
+          canvases.drag.width,
+          canvases.drag.height,
+        );
+
+        drawCard(card, context.drag);
+      }
+    };
+
+    window.onload = function() {
+      var cards = [];
+      
+      for (var index = 0; index < 3; index++) {
+        cards.push({
+          x: state.spaces[index].x + 15,
+          y: state.spaces[index].y + 15,
+          text: names[index],
+          color: color[index]
+        });
+      }
+
+      state.cards = cards;
+
+      window.onresize();
+
+      drawSpaces();
+      drawCards();
+      
+    }
+  </script>
+</body>
+</html>
