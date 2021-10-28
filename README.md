@@ -7,3 +7,7 @@ En muchos colegios e instituciones educativas de Colombia no se cuenta con una p
 # Homepage
 
 ![Chat Application](https://github.com/barryallen2223/edusoft/blob/main/homepage/assets/vista_homepage.png)
+
+# Simulación: Combinar elementos
+
+![Chat Application](https://github.com/barryallen2223/edusoft/blob/main/simulaciones/simCombinarElementos/assets/vista_simulacion_combinar%20elementos.png)
