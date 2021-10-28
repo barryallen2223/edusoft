@@ -1,6 +1,6 @@
 # Edusfot
 
-![Alt text](/relative/path/to/vista_homepage.png?raw=true "Homepage")
+![Chat Application](https://github.com/barryallen2223/edusoft/blob/main/homepage/assets/vista_homepage.png)
 
 ## Introduction
 
