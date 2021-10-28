@@ -1,0 +1,167 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'PT Sans', sans-serif;
+    background: #330169;
+}
+
+header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(./assets/bitmap.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.nav{
+    width: 100%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    padding: 10px;
+    transition: all 0.5s ease;
+}
+
+.nav.active{
+    background: #330169;
+    padding: 15px;
+}
+
+.nav.active .logo,
+.nav.active a,
+.nav.active .menu-btn img{
+    color:#fff;
+}
+
+.nav.active a:hover{
+    background: #ffff;
+    color: #000;
+}
+
+.logo{
+    font-size: 25px;
+    color: #fff;
+    font-weight: 100;
+}
+
+.menu{
+    display:inline-flex;
+}
+
+.menu li{
+    list-style: none;
+    margin: 10px;
+    
+}
+
+.menu li a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.5s ease;
+}
+
+.menu li a:hover{
+    padding: 5px 10px;
+    background: #fff;
+    color: #000;
+    border-radius: 15px;
+}
+
+.menu-btn{
+    color: #fff;
+    font-size: 20px;
+    display: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width:1024px) {
+    .menu-btn{
+        display:block;
+    }
+
+    .menu{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 300px;
+        height: 100vh;
+        background: #330169;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.5s ease;
+        transform: translatex(-100%);
+    }
+    .menu li{
+        margin: 15px 0 ;
+    }
+
+    .menu.nav.active{
+        transform: translatex(0);
+    }
+    
+}
+.scroll{
+    height: 100px;
+}
+
+.cbutton{
+    background-color: #fff;
+    border: 2px solid #fff;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    width: 80px;
+    height: 50px;
+    border-radius: 5px;
+    margin-left: 640px;
+    margin-top: 500px;
+}
+
+.divteacher{
+    display: inline-block;
+    margin-left: 100px;
+    margin-bottom: 60px;
+    background: #fff;
+    width: 85%;
+    height: 550px;
+    border-radius: 5px;
+    padding: 50px;
+}
+
+.textTeacher{
+    display: block;
+    padding-top: 150px;
+    background: white;
+    width: 50%;
+    height: 100%;
+    color: black;
+    text-align: left;
+    font-family: 'PT Sans', sans-serif;
+    
+}
+
+.pictureTeacher{
+    background: white;
+    width: 50%;
+    height: 100%;
+    float: right;
+    padding-left: 50px;
+}
+
+h1{
+    color: #330169;
+    margin-bottom: 30px;
+}
+
+img{
+    width: 500px;
+    height: 500px;
+}
