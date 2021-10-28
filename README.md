@@ -1,6 +1,6 @@
 # Edusfot
 
-![Alt text](/relative/path/to/vista_homepage.png?raw=true)
+![Alt text](/relative/path/to/vista_homepage.png?raw=true "Homepage")
 
 ## Introduction
 
