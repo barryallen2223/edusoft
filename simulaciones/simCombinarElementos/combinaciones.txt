@@ -1,0 +1,72 @@
+Agua-Aire = lluvia
+Agua-Fuego = Vapor
+Agua-tierra = Pantano
+Aire-Fuego = energía
+Aire-tierra = polvo
+Fuego-tierra = lava
+barro-fuego=ladrillo
+energía-agua=vapor
+energía-aire=viento
+lava-agua=obsidiana
+lava-aire=piedra
+vapor-viento = nube
+piedra-fuego=metal
+energía-nube= tormenta
+metal-energía=electricidad
+
+------------------
+Lluvia-tierra = planta
+planta-agua = algas
+energía-viento=huracán
+---------------------
+nube-hielo=niebla
+nitrato de potasio-carbón-azufre=polvora
+acero=carbón-metal
+agua=fuego-hielo
+agujero negro=presión-estrella-luz
+alcohol
+anillo=diamante-oro-metal
+arcilla=barro-arena
+arena
+aurora
+azucar
+barro=tierra-agua
+carbón vegetal= planta-fuego
+ceramica= arcilla-fuego
+diamante=carbón-lava-tierra
+electriidad=energía-metal
+energía=aire-fuego
+estrella
+ladrillo=arcilla-fuego
+metal=fuego-piedra
+oro
+oxígeno
+dioxido carbono
+sal
+soda
+vidrio=fuego-arena
+arena
+vino
+
+
+
+
+agua #1360a8
+aire #89bef0
+lluvia #28315c
+vapor  #667380
+viento #5f656b
+nube  #70baff
+hielo #2b99ff
+tierra #382207
+barro #613806
+fuego #d11313
+ladrillo #591a01
+energía #4a4610
+tormenta #262833
+polvo #915f3d
+lava #ff6600
+obsidiana #7b00ff
+piedra #626163
+metal #272b36
+electricidad #d4c824

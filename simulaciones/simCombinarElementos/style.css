@@ -1,0 +1,116 @@
+
+body{
+    background: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+.layer-drag{
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.scroll-div{
+    /**position: relative**/
+    position:absolute;
+    width: 250px;
+    background: rgb(240, 240, 240);
+    margin: 2% auto;
+    padding: 20px;
+    margin-left: 1050px;
+    border-radius: 10px;
+    height: 530PX;
+    overflow: hidden;   
+}
+
+
+.button-clear{
+    position: fixed;
+    background-color: #6A26D2;
+    border: 2px solid #bd92ff;
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    transition-duration: 0.7s;
+    -webkit-transition-duration: 0.7s;
+    margin: 2% auto;
+    left: 30px;
+}
+
+.button-clear:hover{
+    background-color: #246ec4;
+    border: 2px solid #57a2f8;
+}
+
+.button-opc{
+    position: fixed;
+    background-color: #6A26D2;
+    border: 2px solid #bd92ff;
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    transition-duration: 0.7s;
+    -webkit-transition-duration: 0.7s;
+    margin: 2% auto;
+    left: 90px;
+}
+
+.button-opc:hover{
+    background-color: #246ec4;
+    border: 2px solid #57a2f8;
+}
+
+.modal-container{
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left:0;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.modal{
+    width: 40%;
+    height: 50%;
+    background: #ffff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: relative;
+    transition: transform 1s;
+    transform: translateY(0%);
+    border-radius: 2%;
+    /*overflow: hidden;*/
+
+}
+
+.close{
+    position: absolute;
+    top:5px;
+    right: 5px;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background:#6A26D2;
+    color:#ffff;
+    line-height: 25px;
+    cursor:pointer;
+    border-radius: 50%;
+}
+
+.modal-close{
+    transform: translateY(-200%);
+}
+
+.modal > img{
+    height: 40%;
+}
+
