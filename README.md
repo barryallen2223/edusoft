@@ -2,7 +2,7 @@
 
 ## Introduction
 
-En muchos colegios e instituciones educativas de Colombia no se cuenta con una plataforma en línea que permita potenciar el desarrollo educativo de las personas. Por esto nosotros decidimos como solución a esta problemática desarrollar una plataforma llamada Edusoft, esta plataforma incluirá diversas funcionalidades como  login, chat, calendario, evaluaciones y simulaciones. 
+En muchos colegios e instituciones educativas de Colombia no se cuenta con una plataforma en línea que permita potenciar el desarrollo educativo de las personas. Por esto nosotros decidimos como solución a esta problemática desarrollar un servicio para instituciones educativas, que no tienen acceso a una plataforma virtual, se llama Edusoft este es un sistema, que le permitirá a las instituciones contar con una plataforma virtual multiusos, en la cual se podrán montar notas, hacer exámenes, un gestor de correos y dar soporte en distintas materias, a diferencia de los métodos tradicionales utilizados por muchos colegios nuestro producto les permite tener un mayor orden, la facilidad de hacer exámenes de forma virtual, mejorar la comunicación alumno profesor y además permite al alumno saber sus notas constantemente. 
 
 #### Homepage
 
