@@ -15,3 +15,7 @@ En muchos colegios e instituciones educativas de Colombia no se cuenta con una p
 #### Simulación: Combinar elementos
 
 ![Chat Application](https://github.com/barryallen2223/edusoft/blob/main/simulaciones/simCombinarElementos/assets/vista_simulacion_combinar%20elementos.png)
+
+#### Calendario
+
+![Chat Application](https://github.com/barryallen2223/edusoft/blob/main/calendario/vista_calendario.png)
