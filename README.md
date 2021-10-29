@@ -19,3 +19,12 @@ En muchos colegios e instituciones educativas de Colombia no se cuenta con una p
 #### Calendario
 
 ![Chat Application](https://github.com/barryallen2223/edusoft/blob/main/calendario/vista_calendario.png)
+
+#### Vista login
+
+![Chat Application](https://github.com/barryallen2223/edusoft/blob/main/loging-chat/vista_login.jpeg)
+
+#### Vista chat
+
+![Chat Application](https://github.com/barryallen2223/edusoft/blob/main/loging-chat/vista_chat.jpeg)
+
