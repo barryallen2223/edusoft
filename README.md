@@ -22,7 +22,7 @@ En muchos colegios e instituciones educativas de Colombia no se cuenta con una p
 
 #### Vista login
 
-![Chat Application](https://github.com/barryallen2223/edusoft/blob/main/loging-chat/vista_login.jpeg)
+![Chat Application](https://github.com/barryallen2223/edusoft/blob/main/login-chat/vista_login.jpeg)
 
 #### Vista chat
 
