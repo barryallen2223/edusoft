@@ -20,7 +20,6 @@
                     <button class = "btn-opc" type="button" class ="button" onclick="">
                         <img src="./assets/photo_black_24dp.svg" alt=""/>
                     </button>
-
                     <div class="select-box">
                         <div class="options-container">
                             <div class="option">
@@ -30,20 +29,24 @@
                                     id="automobiles"
                                     name="category"
                                 />
+                                <img src="./assets/radio_button_checked_white_24dp.svg" alt=""/> 
                                 <label for="automobiles">Varias opciones</label>
                             </div>
 
                             <div class="option">
+                                <img src="./assets/check_box_white_24dp.svg" alt=""/> 
                                 <input type="radio" class="radio" id="science" name="category" />
                                 <label for="science">Casillas</label>
                             </div>
     
                             <div class="option">
+                                <img src="./assets/segment_white_24dp.svg" alt=""/> 
                                 <input type="radio" class="radio" id="art" name="category" />
                                 <label for="art">Párrafo</label>
                             </div>
     
                             <div class="option">
+                                <img src="./assets/upload_file_white_24dp.svg" alt=""/> 
                                 <input type="radio" class="radio" id="music" name="category" />
                                 <label for="music">Subir archivo</label>
                             </div>
@@ -57,20 +60,31 @@
         </div>
 
         <div class="answer-opc">
-            <div class="input-div"><input type="input" name="answer" placeholder="Opción 1">
+            <div class="input-div"> 
+                <img src="./assets/radio_button_unchecked_black_24dp.svg" alt=""/> 
+                <input type="input" name="answer" placeholder="Opción 1">
                 <button class = "btn-opc" type="button" class ="button" onclick="">
                     <img src="./assets/photo_black_24dp.svg" alt=""/>
                 </button>
-        </div>
-            
+            </div> 
+
+            <div class="input-div-opc"> 
+                <img src="./assets/radio_button_unchecked_black_24dp.svg" alt=""/> 
+                <input type="input" name="answer" placeholder="Añadir opción">
+            </div> 
 		</div>
 
-		<div>
-            <button class = "btn" type="button" class ="button" onclick="">
-                <img src="./assets/add_white_24dp.svg" alt=""/>
+        <div class="question-opc">
+            <button class = "btn-q" type="button" class ="button" onclick="">
+                <img src="./assets/delete_black_24dp.svg" alt=""/>
             </button>
-		</div>
+        </div>
 	</div>
+    <div>
+        <button class = "btn" type="button" class ="button" onclick="">
+            <img src="./assets/add_white_24dp.svg" alt=""/>
+        </button>
+    </div>
     <script src="./script.js"></script>  
 </body>
 </html>
