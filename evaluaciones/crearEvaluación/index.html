@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+	<title>Formulario sin título</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+</head>
+<body>
+
+	<div class="form">
+		<div class="title-div">
+			<div class="input-title"><input type="input" name="answer" placeholder="Formulario sin título"></div>
+			<div class="input-desc"><input type="input" name="answer" placeholder="Descripción del formulario"></div>		
+		</div>
+
+		<div class="name-div">
+            <div class="question">
+                <div class="input-div"><input type="input" name="answer" placeholder="Pregunta sin título">
+                    <button class = "btn-opc" type="button" class ="button" onclick="">
+                        <img src="./assets/photo_black_24dp.svg" alt=""/>
+                    </button>
+
+                    <div class="select-box">
+                        <div class="options-container">
+                            <div class="option">
+                                <input
+                                    type="radio"
+                                    class="radio"
+                                    id="automobiles"
+                                    name="category"
+                                />
+                                <label for="automobiles">Varias opciones</label>
+                            </div>
+
+                            <div class="option">
+                                <input type="radio" class="radio" id="science" name="category" />
+                                <label for="science">Casillas</label>
+                            </div>
+    
+                            <div class="option">
+                                <input type="radio" class="radio" id="art" name="category" />
+                                <label for="art">Párrafo</label>
+                            </div>
+    
+                            <div class="option">
+                                <input type="radio" class="radio" id="music" name="category" />
+                                <label for="music">Subir archivo</label>
+                            </div>
+                        </div>
+    
+                        <div class="selected">
+                            Varias opciones
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+        <div class="answer-opc">
+            <div class="input-div"><input type="input" name="answer" placeholder="Opción 1">
+                <button class = "btn-opc" type="button" class ="button" onclick="">
+                    <img src="./assets/photo_black_24dp.svg" alt=""/>
+                </button>
+        </div>
+            
+		</div>
+
+		<div>
+            <button class = "btn" type="button" class ="button" onclick="">
+                <img src="./assets/add_white_24dp.svg" alt=""/>
+            </button>
+		</div>
+	</div>
+    <script src="./script.js"></script>  
+</body>
+</html>
