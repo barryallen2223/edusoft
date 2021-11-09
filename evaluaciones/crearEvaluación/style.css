@@ -1,180 +1,140 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
 body{
 	background-color: #ede7f6;
 	font-family: Roboto,Sans-serif;
 }
+
 .form{
-	height: 500px;
-	width: 600px;
+	height:100%;
+	width: 750px;
 	margin: auto;
 }
-.required{
-font-size: 13px;
-color: red;
-}
+
 .title-div{
-	height: 130px;
-	width: 625px;
+	height: 150px;
+	width: 600px;
 	background-color: #FDFEFE;
 	margin: 15px;
 	border-radius: 8px;
 	border-top: 8px solid #6703c4;
-	padding: 20px;
+	padding: 25px;
 }
-.name-div, .college-div, .gmail-div, .mobile-div{
-	height: 250px;
-	width: 660px;
+.question-div{
+	width: 700px;
 	background-color: #FDFEFE;
 	margin: 15px;
 	border-radius: 8px;
+	padding: 25px 25px 30px;
+	margin-top: 20px;
+	flex-direction:row;
 }
-.name{
+.title{
 	padding-top: 20px;
 	padding-left: 25px;
 	padding-bottom: 25px;
 	font-size: 15px;
-	white-space: pre;
 }
-
-.input-div,
-.input-desc{
-	padding-top: 15px;
-	padding-left: 25px;
-	
-}
-.input-div input,
-.input-desc input{
-	width: 300px;
-	margin-left: 10px;
-	border: 0;
-	outline: 0;
-	padding-top: 10px;
-	border-bottom: 1.5px solid #DCD7D7;
-	font-size: 15px;
-    -webkit-transition: all 0.1s ease;
-    -o-transition:all 0.1s ease;
-    transition: all 0.1s ease;
-}
-
-.input-div-opc{
-	padding-top: 15px;
-	padding-left: 25px;
-	
-}
-.input-div-opc input{
-	width: 150px;
-	margin-left: 10px;
-	border: 0;
-	outline: 0;
-	padding-top: 10px;
-	border-bottom: 1.5px solid #DCD7D7;
-	font-size: 15px;
-    -webkit-transition: all 0.1s ease;
-    -o-transition:all 0.1s ease;
-    transition: all 0.1s ease;
-}
-
-.input-desc input{
-	width: 500px;
-}
-
-.input-title{
+.input-div{
 	padding-top: 25px;
 	padding-left: 25px;
 }
-.input-title input{
-	width: 500px;
+.input-div input{
+	width: 300px;
 	border: 0;
 	outline: 0;
 	border-bottom: 1.5px solid #DCD7D7;
-	font-size: 30px;
-	color: #000;
-    -webkit-transition: all 0.1s ease;
-    -o-transition:all 0.1s ease;
-    transition: all 0.1s ease;
+	font-size: 15px;
 }
-
-.input-title ::placeholder{
-	color:#000;
-}
-
-.input-div input:focus,
-.input-title input:focus,
-.input-desc input:focus{
-	border-bottom: 2px solid #6703c4;
-}
-
-.input-div-opc input:focus{
-	border-bottom: 2px solid #6703c4;
-}
-
 .btn{
 	height: 36px;
-	width: 50px;
+	width: 70px;
 	background-color: #6703c4;
 	border-radius: 5px;
-	font-size: 14px;
+	font-size: 30px;
 	letter-spacing: .5px;
 	font-weight: 540;
 	border: none;
-	padding: 5px;
-	position: absolute;
-	margin: 15px 15px 15px 35px;
+	padding: 3px;
+	position:relative;
+	margin: 15px;
 	color: white;
-	cursor: pointer;
+}
+
+.question-div textarea{
+	width: 50%;
+	height: 20px;
+	padding: 15px;
+	margin-right: 10px;
+	outline: none;
+	resize: none;
+	font-size: 16px;
+	border-color: #ffff;
+	background: #ebe9e9;
+	border-bottom: 2px solid #808080;
+	border-radius: 5px;
+	max-height: 300px;
+}
+
+textarea:is(:focus, :valid){
+	border-width: 1px;
+	border-bottom: 2px solid #6703c4;
+}
+
+textarea::-webkit-scrollbar{
+	width: 0px;
 }
 
 .btn-opc{
-	height: 30px;
-	width: 50px;
-	background-color: white;
-	border-radius: 5px;
-	font-size: 14px;
-	letter-spacing: .5px;
-	font-weight: 540;
-	border: none;
-	padding: 5px;
+	height: 40px;
+	width: 40px;
 	position: absolute;
-	margin: 0px 15px 60px 15px;
-	margin-left: 8px;
+	margin: 7px 15px 15px 10px;
 	cursor: pointer;
+	background-color: white;
+	border-radius: 100px;
+	border: none;
 	-webkit-transition: all .1s ease;
     -o-transition:all .1s ease;
     transition: all .1s ease;
 }
 
 .btn-opc :hover{
-	background-color: rgb(233, 232, 232);
-	border-radius: 10px;
+	background-color: #cfcece;
+	border: 5px solid #cfcece;
+	border-radius: 100px;
 }
 
-
-.last-div h2{
-	text-align: center;
-	padding-top: 50px;
-	color: #a2a4a6;
-	font-weight: 200;
+input[type="file"]{
+	display:none;
 }
-.term{
-	font-size: 12px;
-	padding-left: 65px;
-	padding-top: 5px;
+
+label#btn-img{
+	height: 40px;
+	width: 40px;
+	background-color:#fff;
+	position:relative;
 	position: absolute;
-}
-.never{
-	padding-left: 15px;
-	font-size: 12px;
-	padding-top: 70px;
-	font-weight: 400;
+	margin: 6px 15px 15px 10px;
+	display: inline-flex;
+	justify-content: center;
+	align-items:center;
+	border-radius: 100px;
+	-webkit-transition: all .1s ease;
+    -o-transition:all .1s ease;
+    transition: all .1s ease;
 }
 
-.question{
-	display: inline-block;
-	margin-bottom: 10px;
+label#btn-img:hover{
+	background-color: #cfcece;
 }
 
 .select-box {
     display:inline-flex;
-	position:fixed;
+	position:absolute;
     width: 220px;
     flex-direction: column;
 	margin-left: 90px;
@@ -246,7 +206,7 @@ color: red;
     background: #246ec4;
 }
 
-.select-box label {
+.select-box .option label {
     cursor: pointer;
 }
 
@@ -254,30 +214,68 @@ color: red;
     display: none;
 }
 
-.answer-opc{
-	margin-bottom: 50px;
+.select-box .option img{
+    width: 20px;
+    height: 20px;
 }
 
-.btn-q{
-	height: 30px;
+.btn-div{
+	height: 50px;
 	width: 50px;
-	background-color: white;
-	border-radius: 5px;
-	font-size: 14px;
-	letter-spacing: .5px;
-	font-weight: 540;
+	position:static;
+	margin: 10px 5px 3px 2px;
+	background-color: #fff;
 	border: none;
-	padding: 5px;
-	margin: 0px 15px 0px 0px;
-	cursor: pointer;
-	float: right;
+	border-radius: 100px;
 	cursor: pointer;
 	-webkit-transition: all .1s ease;
     -o-transition:all .1s ease;
     transition: all .1s ease;
 }
 
-.btn-q :hover{
-	background-color: rgb(233, 232, 232);
-	border-radius: 10px;
+.btn-div :hover{
+	background-color: #cfcece;
+	border: 5px solid #cfcece;
+	border-radius: 100px;
+}
+
+.answer-div{
+	width: 100%;
+	margin:auto;
+	margin-top: 15px;
+	border-bottom: #cfcece;
+}
+
+.answer-div textarea{
+	width: 70%;
+	height: 10px;
+	padding: 15px;
+	margin-right: 10px;
+	outline: none;
+	resize: none;
+	font-size: 16px;
+	border-color: #ffff;
+	background: #ffff;
+	border-bottom: 2px solid #808080;
+	border-radius: 5px;
+	max-height: 300px;
+}
+
+.answer-div textarea:is(:focus, :valid){
+	border-width: 1px;
+	border-bottom: 2px solid #6703c4;
+}
+
+.answer-div button{
+	height: 50px;
+	width: 50px;
+	position:absolute;
+	margin: 2px 5px 3px 50px;
+	background-color: #fff;
+	border: none;
+	border-radius: 100px;
+	cursor: pointer;
+	-webkit-transition: all .1s ease;
+    -o-transition:all .1s ease;
+    transition: all .1s ease;
 }

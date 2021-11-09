@@ -7,84 +7,80 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 </head>
 <body>
+    <div id="form" class="form">
+		<div id ="question-0" class="question-div">
+			<div>
+				<textarea placeholder="Pregunta" required></textarea>
+				<!--<button id = "btn-img" type="button" class ="btn-opc">
+					<img src="./assets/photo_black_24dp.svg" alt=""/>
+				</button>-->
+				<input type="file" name="file" id="file" accept="image/*">
+				<label id="btn-img" for="file">
+					<img src="./assets/photo_black_24dp.svg">
+				</label>
 
-	<div class="form">
-		<div class="title-div">
-			<div class="input-title"><input type="input" name="answer" placeholder="Formulario sin título"></div>
-			<div class="input-desc"><input type="input" name="answer" placeholder="Descripción del formulario"></div>		
+				<div class="select-box">
+					<div class="options-container">
+						<div class="option">
+							<img src="./assets/radio_button_checked_white_24dp.svg" alt=""/> 
+							<input type="radio" class="radio" id="type-question" name="category"/>
+							<label for="type-question">Varias opciones</label>
+						</div>
+		
+						<div class="option">
+							<img src="./assets/check_box_white_24dp.svg" alt=""/> 
+							<input type="radio" class="radio" id="casillas" name="category" />
+							<label for="casillas">Casillas</label>
+						</div>
+		
+						<div class="option">
+							<img src="./assets/segment_white_24dp.svg" alt=""/>
+							<input type="radio" class="radio" id="parrafo" name="category" />
+							<label for="parrafo">Párrafo</label>
+						</div>
+		
+						<div class="option">
+							<img src="./assets/upload_file_white_24dp.svg" alt=""/> 
+							<input type="radio" class="radio" id="archivo" name="category" />
+							<label for="archivo">Subir archivo</label>
+						</div>
+					</div>
+		
+					<div class="selected">
+						Varias opciones
+					</div>
+				</div>
+				
+				<div style="display:none;">
+					<div>
+						<input id="btn-delete-img" class="btn-opc" type="button" value="x" onclick="removeImg(event)">
+					</div>
+					<div id="preview" class="styleImage">
+					</div>
+				</div>
+			</div>
+			<div class="answer-div">
+				<div class="answer">
+					<img src="./assets/radio_button_unchecked_black_24dp.svg" alt=""/>
+					<textarea placeholder="Opción 1" required></textarea>
+					<input type="file" name="file" id="file" accept="image/*">
+					<label id="btn-img" for="file">
+					<img src="./assets/photo_black_24dp.svg">
+					</label>
+					<button class="btn-div" type="submit"><img src="./assets/close_black_24dp.svg" alt=""/></button>
+				</div>
+				<button class="btn-div" type="submit" style="position:relative;margin-left: 0;"><img src="./assets/add_circle_outline_black_24dp.svg" alt=""/></button>
+			</div>
+			<div>
+				<button class="btn-div" type="submit"><img src="./assets/delete_black_24dp.svg" alt=""/> </button>
+				<button class="btn-div" type="submit"><img src="./assets/content_copy_black_24dp.svg" alt=""/></button>
+			</div>
 		</div>
 
-		<div class="name-div">
-            <div class="question">
-                <div class="input-div"><input type="input" name="answer" placeholder="Pregunta sin título">
-                    <button class = "btn-opc" type="button" class ="button" onclick="">
-                        <img src="./assets/photo_black_24dp.svg" alt=""/>
-                    </button>
-                    <div class="select-box">
-                        <div class="options-container">
-                            <div class="option">
-                                <input
-                                    type="radio"
-                                    class="radio"
-                                    id="automobiles"
-                                    name="category"
-                                />
-                                <img src="./assets/radio_button_checked_white_24dp.svg" alt=""/> 
-                                <label for="automobiles">Varias opciones</label>
-                            </div>
-
-                            <div class="option">
-                                <img src="./assets/check_box_white_24dp.svg" alt=""/> 
-                                <input type="radio" class="radio" id="science" name="category" />
-                                <label for="science">Casillas</label>
-                            </div>
-    
-                            <div class="option">
-                                <img src="./assets/segment_white_24dp.svg" alt=""/> 
-                                <input type="radio" class="radio" id="art" name="category" />
-                                <label for="art">Párrafo</label>
-                            </div>
-    
-                            <div class="option">
-                                <img src="./assets/upload_file_white_24dp.svg" alt=""/> 
-                                <input type="radio" class="radio" id="music" name="category" />
-                                <label for="music">Subir archivo</label>
-                            </div>
-                        </div>
-    
-                        <div class="selected">
-                            Varias opciones
-                        </div>
-                    </div>
-            </div>
-        </div>
-
-        <div class="answer-opc">
-            <div class="input-div"> 
-                <img src="./assets/radio_button_unchecked_black_24dp.svg" alt=""/> 
-                <input type="input" name="answer" placeholder="Opción 1">
-                <button class = "btn-opc" type="button" class ="button" onclick="">
-                    <img src="./assets/photo_black_24dp.svg" alt=""/>
-                </button>
-            </div> 
-
-            <div class="input-div-opc"> 
-                <img src="./assets/radio_button_unchecked_black_24dp.svg" alt=""/> 
-                <input type="input" name="answer" placeholder="Añadir opción">
-            </div> 
-		</div>
-
-        <div class="question-opc">
-            <button class = "btn-q" type="button" class ="button" onclick="">
-                <img src="./assets/delete_black_24dp.svg" alt=""/>
-            </button>
-        </div>
+		<div>
+			<input class="btn" type="button" value="+" id="btn_add">
+		</div>		
 	</div>
-    <div>
-        <button class = "btn" type="button" class ="button" onclick="">
-            <img src="./assets/add_white_24dp.svg" alt=""/>
-        </button>
-    </div>
     <script src="./script.js"></script>  
 </body>
 </html>
