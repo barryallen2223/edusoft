@@ -5,9 +5,17 @@
 	<title>Formulario sin título</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
 <body>
     <div class="form" id="form">
+		<button class="send-eval" type="button">Enviar</button>
+		<div class="title-div">
+			<h1>Titulo de la evaluación</h1>
+			<p>Esto es una descripción XD</p>
+		</div>
+
         <div id="question-container-0" class="question-container">
             <div class="question-area">
                 <textarea placeholder="Pregunta" required></textarea>
@@ -69,8 +77,14 @@
 	
 				<div class="selected">+</div>
 			</div>
-		</div>	
+			<div class="go-top-container">
+				<div class="go-top-button">
+					<img src="./assets/expand_less_white_24dp.svg">
+				</div>
+			</div>
+		</div>
     </div>  
+
     <script src="./script.js"></script>  
 </body>
 </html>

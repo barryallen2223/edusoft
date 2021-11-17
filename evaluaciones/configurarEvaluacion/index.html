@@ -10,28 +10,105 @@
 </head>
 <body>
 	<div class="container">
-		<div class="img">
-			<img src="assets/spreadsheets.svg">
-		</div>
 		<div class="login-content">
 			<form action="index.html">
 				<h3 class="title">Aquí puedes configurar la evaluación para luego crearla</h3>
     			<div class="input-div one">
-           			<div class="i">
-           			</div>
-           		   <div class="div">
-           		   		<h5>Título</h5>
-           		   		<input type="text" class="input">
-           		   </div>
-           		</div>
-           		<div class="input-div pass">
-           		   <div class="i"> 
-           		   </div>
-           		   <div class="div">
-           		    	<h5>Descripción</h5>
-           		    	<input type="text" class="input">
-            	   </div>
+    				<div class="i">
+					</div>
+    			<div class="div">
+    					<h5>Título</h5>
+    					<input type="text" class="input">
+    			</div>
+    			</div>
+    			<div class="input-div pass">
+    			<div class="i"> 
+    				</div>
+    					<div class="div">
+    					<h5>Descripción</h5>
+    					<input type="text" class="input">
+            		</div>
             	</div>
+					<div class="select-box">
+						<div class="options-container">
+						<div class="option">
+							<input type="radio" class="radio" id="film" name="category" />
+							<label for="film">Film & Animation</label>
+						</div>
+						<div class="option">
+							<input type="radio" class="radio" id="science" name="category" />
+							<label for="science">Science & Technology</label>
+						</div>
+						<div class="option">
+							<input type="radio" class="radio" id="art" name="category" />
+							<label for="art">Art</label>
+						</div>
+						<div class="option">
+							<input type="radio" class="radio" id="music" name="category" />
+							<label for="music">Music</label>
+						</div>
+						<div class="option">
+							<input type="radio" class="radio" id="travel" name="category" />
+							<label for="travel">Travel & Events</label>
+						</div>
+						<div class="option">
+							<input type="radio" class="radio" id="sports" name="category" />
+							<label for="sports">Sports</label>
+						</div>
+						<div class="option">
+							<input type="radio" class="radio" id="news" name="category" />
+							<label for="news">News & Politics</label>
+						</div>
+						<div class="option">
+							<input type="radio" class="radio" id="tutorials" name="category" />
+							<label for="tutorials">Tutorials</label>
+						</div>
+					</div>
+		
+					<div class="selected">
+						Seleccione el grupo
+					</div>
+					</div>
+
+					<h5>Fecha</h5>
+					<div class="date">
+						<div class="input-div pass" style="width: 200px; margin-right: 20px;">
+							<div class="i"> 
+								</div>
+									<div class="div">
+									<h5>Inicio dd-mm-aaaa</h5>
+									<input type="text" class="input">
+								</div>
+						</div>
+						<div class="input-div pass" style="width: 200px;">
+							<div class="i"> 
+								</div>
+									<div class="div">
+									<h5>Final dd-mm-aaaa</h5>
+									<input type="text" class="input">
+								</div>
+						</div>
+					</div>
+					
+					<h5>Hora</h5>
+					<div class="date">
+						<div class="input-div pass" style="width: 200px; margin-right: 20px;">
+							<div class="i"> 
+								</div>
+									<div class="div">
+									<h5>Inicio h-mm</h5>
+									<input type="text" class="input">
+								</div>
+						</div>
+						<div class="input-div pass" style="width: 200px;">
+							<div class="i"> 
+								</div>
+									<div class="div">
+									<h5>Final h-mm</h5>
+									<input type="text" class="input">
+								</div>
+						</div>
+					</div>
             	<input type="submit" class="btn" value="Continuar">
             </form>
         </div>
